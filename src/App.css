@@ -1,42 +1,237 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+/* styles.css */
+
+/* General */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+}
+
+header .logo img {
+  height: 40px;
+}
+
+header .nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+}
+
+header .nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+header .cart-icon {
+  cursor: pointer;
+}
+
+header .cart-icon span {
+  background-color: #ff6347;
+  border-radius: 50%;
+  padding: 5px;
+  font-size: 14px;
+  margin-left: 5px;
+}
+
+/* Showcase */
+.showcase {
+  padding: 20px;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.showcase h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.product-gallery {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.product {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  text-align: center;
+  width: 200px;
 }
 
-.card {
-  padding: 2em;
+.product img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
 }
 
-.read-the-docs {
-  color: #888;
+.product h3 {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.product p {
+  color: #333;
+}
+
+.product button {
+  background-color: #ff6347;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 3px;
+  font-size: 14px;
+}
+
+.product button:hover {
+  background-color: #e5533a;
+}
+
+/* Carousel */
+.carousel {
+  padding: 20px;
+  text-align: center;
+  background-color: #f1f1f1;
+}
+
+.carousel h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.carousel-container {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding: 10px 0;
+}
+
+.carousel-item {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  text-align: center;
+  min-width: 200px;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.carousel-item h3 {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.carousel-item p {
+  color: #333;
+}
+
+/* Cart */
+#cart {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  padding: 15px;
+  z-index: 1000;
+}
+
+#cart h2 {
+  font-size: 20px;
+  margin: 0 0 15px;
+}
+
+#cart ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#cart li {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+}
+
+#cart p {
+  font-weight: bold;
+}
+
+#cart button {
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 3px;
+  font-size: 14px;
+  width: 100%;
+}
+
+#cart button:hover {
+  background-color: #45a049;
+}
+
+/* Contact */
+#contacto {
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+}
+
+#contacto h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+#contacto p {
+  font-size: 16px;
+}
+
+.contenedor-principal {
+  display: flex;
+  flex-direction: column; /* Acomoda los elementos en columna, si es necesario */
+  align-items: center;
+  width: 100%; /* Asegura que ocupe todo el ancho */
+  margin: 0;
+  padding: 0;
+}
+
+.tarjeta-producto {
+  max-width: 300px;
+  width: 100%; /* Permite que se ajuste a diferentes tamaños de pantalla */
+  margin: 10px;
+}
+
+.contenedor-productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  width: 100%;
+  padding: 20px;
 }
